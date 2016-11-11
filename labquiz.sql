@@ -56,6 +56,6 @@ WHERE rating = (
 		FROM myveryownallratings
 	)
 )
-UNION
+UNION ALL
 SELECT * from myveryowntopratedbeer 
 /
