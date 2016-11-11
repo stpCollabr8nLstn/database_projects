@@ -1,0 +1,13 @@
+SELECT beer, rating AS score
+FROM myveryownallratings 
+WHERE rating = (
+	SELECT MAX(rating) 
+	FROM myveryownallratings
+	WHERE rating < (
+		SELECT MAX(rating)
+		FROM myveryownallratings
+	)
+)
+UNION
+SELECT * from myveryowntopratedbeer 
+/
