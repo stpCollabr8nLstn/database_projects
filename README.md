@@ -1,1 +1,1 @@
-# database_projects
+# sql_queries
